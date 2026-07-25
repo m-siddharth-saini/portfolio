@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Siddharth Saini — Senior Product Owner & Requirements Engineer</title>
+<meta name="description" content="Siddharth Saini — Senior Product Owner & Requirements Engineer, CSP-PO®, Ex-Mercedes-Benz. Düsseldorf, Germany." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --charcoal:       #14202b;
+    --charcoal-soft:  #2c3e4c;
+    --paper:          #ffffff;
+    --paper-dim:      #f4f6f8;
+    --line:           #dfe4e8;
+    --teal:           #0f6f66;
+    --teal-deep:      #0a4f49;
+    --teal-tint:      #e6f2f0;
+    --amber:          #c07a2e;
+
+    --font-display: 'Space Grotesk', 'Inter', sans-serif;
+    --font-body:    'Inter', sans-serif;
+    --font-mono:    'IBM Plex Mono', monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font-body);
+    color:var(--charcoal);
+    background:var(--paper);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--teal); color:#fff;}
+
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  section{scroll-margin-top:96px;}
+  :focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding-inline:24px;
+  }
+
+  h1,h2,h3,h4{
+    font-family:var(--font-display);
+    font-weight:600;
+    letter-spacing:-0.01em;
+    line-height:1.12;
+  }
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--teal-deep);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:16px; height:1px;
+    background:var(--teal-deep);
+    display:inline-block;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block:16px;
+    gap:16px;
+  }
+  .brand{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:-0.01em;
+    flex-shrink:0;
+  }
+  .brand span{color:var(--teal);}
+  .nav-links{
+    display:flex; align-items:center; gap:28px;
+    font-size:14.5px; font-weight:500;
+  }
+  .nav-links a.section-link{
+    color:var(--charcoal-soft);
+    position:relative;
+    padding-block:4px;
+    transition:color .15s ease;
+  }
+  .nav-links a.section-link:hover{color:var(--teal-deep);}
+  .nav-links a.section-link::after{
+    content:"";
+    position:absolute; left:0; bottom:-2px;
+    width:0; height:2px; background:var(--teal);
+    transition:width .2s ease;
+  }
+  .nav-links a.section-link:hover::after{width:100%;}
+
+  .nav-actions{display:flex; align-items:center; gap:10px;}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-mono);
+    font-size:13px; font-weight:500;
+    letter-spacing:0.02em;
+    padding:11px 20px;
+    border-radius:3px;
+    border:1px solid var(--charcoal);
+    cursor:pointer;
+    transition:all .18s ease;
+    background:none;
+  }
+  .btn-solid{
+    background:var(--charcoal);
+    color:#fff;
+  }
+  .btn-solid:hover{background:var(--teal-deep); border-color:var(--teal-deep); transform:translateY(-1px);}
+  .btn-outline{
+    background:transparent;
+    color:var(--charcoal);
+    border:1px solid var(--line);
+  }
+  .btn-outline:hover{border-color:var(--charcoal); background:var(--paper-dim);}
+  .btn-accent{
+    background:var(--teal);
+    color:#fff;
+    border-color:var(--teal);
+  }
+  .btn-accent:hover{background:var(--teal-deep); border-color:var(--teal-deep); transform:translateY(-1px);}
+
+  /* Language toggle */
+  .lang-toggle{
+    display:inline-flex;
+    border:1px solid var(--line);
+    border-radius:3px;
+    overflow:hidden;
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    font-weight:500;
+    flex-shrink:0;
+  }
+  .lang-toggle button{
+    border:none; background:var(--paper);
+    color:var(--charcoal-soft);
+    padding:9px 13px;
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease;
+  }
+  .lang-toggle button + button{border-left:1px solid var(--line);}
+  .lang-toggle button[aria-pressed="true"]{
+    background:var(--charcoal);
+    color:#fff;
+  }
+  .lang-toggle button:hover:not([aria-pressed="true"]){background:var(--paper-dim);}
+
+  .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .menu-toggle span{display:block; width:22px; height:2px; background:var(--charcoal); margin:5px 0; transition:.2s;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding-block: 88px 96px;
+    background:
+      radial-gradient(1100px 420px at 82% -10%, var(--teal-tint), transparent 60%);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap:64px;
+    align-items:center;
+  }
+  .headshot-frame{
+    width:100%;
+    max-width:320px;
+    aspect-ratio:1/1;
+    border-radius:6px;
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    box-shadow: 0 24px 48px -24px rgba(20,32,43,0.25);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .headshot-frame::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(135deg, var(--teal-tint) 0%, transparent 55%);
+  }
+  .headshot-placeholder{
+    text-align:center;
+    color:var(--charcoal-soft);
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    z-index:1;
+  }
+  .headshot-placeholder svg{margin-bottom:12px; opacity:0.35;}
+
+  .status-chip{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    letter-spacing:0.04em;
+    padding:5px 10px 5px 8px;
+    border-radius:3px;
+    background:var(--teal-tint);
+    color:var(--teal-deep);
+    border:1px solid rgba(15,111,102,0.18);
+    margin-top:20px;
+  }
+  .status-chip .dot{
+    width:6px; height:6px; border-radius:50%; background:var(--teal);
+  }
+
+  .hero-copy h1{
+    font-size:clamp(30px, 4vw, 44px);
+    margin-bottom:14px;
+  }
+  .hero-tagline{
+    font-family:var(--font-mono);
+    font-size:14.5px;
+    color:var(--teal-deep);
+    margin-bottom:18px;
+  }
+  .hero-value{
+    font-size:17px;
+    color:var(--charcoal-soft);
+    max-width:52ch;
+    margin-bottom:28px;
+  }
+  .hero-cta{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:32px;}
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap:20px;
+    font-size:13.5px;
+    color:var(--charcoal-soft);
+    border-top:1px solid var(--line);
+    padding-top:20px;
+  }
+  .hero-meta div{display:flex; align-items:center; gap:7px;}
+  .hero-meta strong{color:var(--charcoal); font-weight:600;}
+
+  /* ---------- Section shell ---------- */
+  .section{padding-block:96px;}
+  .section-alt{background:var(--paper-dim);}
+  .section-head{margin-bottom:52px; max-width:640px;}
+  .section-head h2{font-size:clamp(26px,3vw,34px); margin-top:10px;}
+
+  /* ---------- Experience / case studies ---------- */
+  .case{
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--paper);
+    padding:36px;
+    margin-bottom:24px;
+    display:grid;
+    grid-template-columns: 260px 1fr;
+    gap:36px;
+  }
+  .case-alt{background:var(--paper-dim);}
+  .case-meta{border-right:1px solid var(--line); padding-right:36px;}
+  .case-meta h3{font-size:18px; margin-bottom:4px;}
+  .case-role{font-size:13.5px; color:var(--charcoal-soft); margin-bottom:16px;}
+  .case-tags{display:flex; flex-wrap:wrap; gap:6px;}
+  .tag{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    padding:4px 8px;
+    border-radius:3px;
+    background:var(--teal-tint);
+    color:var(--teal-deep);
+    border:1px solid rgba(15,111,102,0.15);
+  }
+  .status-tag{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:4px 9px;
+    border-radius:3px;
+    display:inline-flex; align-items:center; gap:5px;
+    margin-bottom:14px;
+  }
+  .status-shipped{background:var(--teal-tint); color:var(--teal-deep); border:1px solid rgba(15,111,102,0.2);}
+  .status-shipped::before{content:"●"; font-size:8px; color:var(--teal);}
+
+  .pillar{margin-bottom:16px;}
+  .pillar:last-child{margin-bottom:0;}
+  .pillar-label{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:4px;
+  }
+  .pillar p{font-size:15px; color:var(--charcoal-soft);}
+  .pillar p strong{color:var(--charcoal); font-weight:600;}
+
+  .stat-row{
+    display:flex; gap:28px; flex-wrap:wrap;
+    margin-top:20px; padding-top:20px;
+    border-top:1px dashed var(--line);
+  }
+  .stat{}
+  .stat b{
+    font-family:var(--font-display);
+    font-size:22px; display:block; color:var(--teal-deep);
+  }
+  .stat span{font-size:12px; color:var(--charcoal-soft);}
+
+  /* ---------- Ventures grid ---------- */
+  .venture-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:20px;
+  }
+  .venture-card{
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:28px;
+    background:var(--paper);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .venture-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 20px 40px -28px rgba(20,32,43,0.35);
+    border-color:var(--teal);
+  }
+  .venture-icon{
+    width:38px; height:38px;
+    border-radius:6px;
+    background:var(--teal-tint);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:16px;
+    color:var(--teal-deep);
+  }
+  .venture-card h3{font-size:16.5px; margin-bottom:8px;}
+  .venture-card p{font-size:14px; color:var(--charcoal-soft);}
+  .venture-tag{
+    font-family:var(--font-mono);
+    font-size:10px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:10px;
+    display:block;
+  }
+
+  /* ---------- Skills ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .skill-col{background:var(--paper); padding:32px;}
+  .skill-col h3{
+    font-family:var(--font-mono);
+    font-size:12px; letter-spacing:0.05em; text-transform:uppercase;
+    color:var(--teal-deep);
+    margin-bottom:18px;
+  }
+  .skill-list{list-style:none; display:flex; flex-direction:column; gap:11px;}
+  .skill-list li{
+    font-size:14.5px;
+    display:flex; align-items:center; gap:9px;
+    color:var(--charcoal-soft);
+  }
+  .skill-list li::before{
+    content:"";
+    width:5px; height:5px; border-radius:50%;
+    background:var(--teal);
+    flex-shrink:0;
+  }
+  .skill-list li strong{color:var(--charcoal); font-weight:500;}
+  .lang-bar{
+    display:flex; align-items:center; justify-content:space-between;
+    font-size:14.5px; color:var(--charcoal-soft); margin-bottom:6px;
+  }
+  .lang-track{height:4px; background:var(--paper-dim); border-radius:2px; margin-bottom:16px; overflow:hidden;}
+  .lang-fill{height:100%; background:var(--teal); border-radius:2px;}
+
+  /* ---------- Contact / Footer ---------- */
+  footer{
+    background:var(--charcoal);
+    color:#fff;
+    padding-block:80px 32px;
+  }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:56px;
+    padding-bottom:56px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  footer h2{color:#fff; font-size:clamp(26px,3vw,36px); margin-bottom:16px;}
+  footer .eyebrow{color:#7fd8cc;}
+  footer .eyebrow::before{background:#7fd8cc;}
+  .contact-lede{color:rgba(255,255,255,0.65); font-size:16px; max-width:44ch; margin-bottom:28px;}
+  .contact-list{display:flex; flex-direction:column; gap:14px;}
+  .contact-list a{
+    display:flex; align-items:center; gap:12px;
+    font-size:15.5px;
+    color:#fff;
+    padding:14px 18px;
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:6px;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .contact-list a:hover{border-color:#7fd8cc; background:rgba(127,216,204,0.06);}
+  .contact-list .ico{
+    width:32px; height:32px; border-radius:5px;
+    background:rgba(127,216,204,0.12);
+    display:flex; align-items:center; justify-content:center;
+    color:#7fd8cc; flex-shrink:0;
+  }
+  .contact-card{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:8px;
+    padding:28px;
+  }
+  .contact-card h4{font-size:13px; font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em; color:#7fd8cc; margin-bottom:16px;}
+  .meta-row{display:flex; justify-content:space-between; gap:12px; font-size:14px; padding-block:10px; border-bottom:1px solid rgba(255,255,255,0.08);}
+  .meta-row:last-child{border-bottom:none;}
+  .meta-row span:first-child{color:rgba(255,255,255,0.5);}
+  .meta-row span:last-child{color:#fff; font-weight:500; text-align:right;}
+
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-top:28px; flex-wrap:wrap; gap:12px;
+    font-size:13px; color:rgba(255,255,255,0.45);
+  }
+  .footer-bottom a{color:rgba(255,255,255,0.7);}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px){
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .headshot-frame{max-width:220px;}
+    .case{grid-template-columns:1fr;}
+    .case-meta{border-right:none; border-bottom:1px solid var(--line); padding-right:0; padding-bottom:20px;}
+    .venture-grid{grid-template-columns:1fr;}
+    .skills-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width: 760px){
+    .nav-links{
+      position:fixed; top:65px; left:0; right:0;
+      background:#fff; border-bottom:1px solid var(--line);
+      flex-direction:column; align-items:flex-start;
+      padding:20px 24px; gap:18px;
+      transform:translateY(-8px);
+      opacity:0; pointer-events:none;
+      transition:all .2s ease;
+    }
+    .nav-links.open{transform:translateY(0); opacity:1; pointer-events:auto;}
+    .nav-links .btn{width:100%; justify-content:center; margin-top:6px;}
+    .nav-links .lang-toggle{align-self:flex-start;}
+    .menu-toggle{display:block;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">Siddharth<span>.</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#experience" class="section-link" data-i18n="nav.experience">Berufserfahrung</a>
+      <a href="#ventures" class="section-link" data-i18n="nav.ventures">Projekte</a>
+      <a href="#skills" class="section-link" data-i18n="nav.skills">Fähigkeiten</a>
+      <a href="#contact" class="section-link" data-i18n="nav.contact">Kontakt</a>
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language switch">
+          <button type="button" id="langDE" aria-pressed="true">DE</button>
+          <button type="button" id="langEN" aria-pressed="false">EN</button>
+        </div>
+        <a href="assets/Siddharth_Saini_CV.pdf" class="btn btn-solid" download data-i18n="nav.cv">CV Herunterladen</a>
+      </div>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="headshot-frame">
+          <div class="headshot-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+            HEADSHOT<br>1200×1200
+          </div>
+        </div>
+        <div class="status-chip"><span class="dot"></span> <span data-i18n="hero.status">Offen für Senior PO- / Requirements-Engineering-Positionen</span></div>
+      </div>
+
+      <div class="hero-copy">
+        <div class="eyebrow" data-i18n="hero.eyebrow">Düsseldorf, Deutschland</div>
+        <h1>Siddharth Saini</h1>
+        <div class="hero-tagline" data-i18n="hero.tagline">Certified Scrum Professional (CSP‑PO)® · Ex‑Mercedes‑Benz</div>
+        <p class="hero-value" data-i18n="hero.value">Verbindung von technischer Umsetzung und Business Value in komplexen digitalen Produkten — durch datengetriebene Priorisierung, funktionsübergreifende Stakeholder-Abstimmung und agile Führung auf Enterprise-Ebene.</p>
+        <div class="hero-cta">
+          <a href="#experience" class="btn btn-accent" data-i18n="hero.ctaCases">Case Studies ansehen →</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero.ctaContact">Kontakt aufnehmen</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong data-i18n="hero.workAuthLabel">Aufenthaltstitel:</strong>&nbsp;Unbefristete Niederlassungserlaubnis (PR)</div>
+          <div><strong data-i18n="hero.langLabel">Sprachen:</strong>&nbsp;DE (C1) · EN (C2) · HI (C2)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="experience.eyebrow">Case Studies, keine Stellenbeschreibung</div>
+        <h2 data-i18n="experience.heading">Berufserfahrung & Case Studies</h2>
+      </div>
+
+      <!-- Mercedes-Benz -->
+      <article class="case">
+        <div class="case-meta">
+          <h3>Mercedes‑Benz AG</h3>
+          <p class="case-role" data-i18n="case1.role">Product Owner — Plant Logistics Tracking Software</p>
+          <div class="case-tags">
+            <span class="tag">MoSCoW</span>
+            <span class="tag" data-i18n="case1.tag2">Multi-Plant-Rollout</span>
+            <span class="tag" data-i18n="case1.tag3">API-Integration</span>
+          </div>
+        </div>
+        <div>
+          <span class="status-tag status-shipped" data-i18n="case1.status">Live — 4 Werke</span>
+          <div class="pillar">
+            <div class="pillar-label" data-i18n="pillar.problem">Ausgangslage</div>
+            <p data-i18n="case1.problem">Ein Logistik-Tracking-System sollte an <strong>vier Standorten (drei in Deutschland, einem in Spanien)</strong> live gehen — bei uneinheitlichen lokalen Anforderungen und einem fixen Go-Live-Termin.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-label" data-i18n="pillar.action">Vorgehen</div>
+            <p data-i18n="case1.action">Backlog-Verantwortung end-to-end übernommen, <strong>50+ Stakeholder</strong> über Werke und IT hinweg mit <strong>MoSCoW-Priorisierung</strong> ausgerichtet und kritische Blocker bei der Integration einer Drittanbieter-API persönlich gelöst.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-label" data-i18n="pillar.result">Ergebnis</div>
+            <p data-i18n="case1.result">Rollout an allen vier Standorten vor Zeitplan abgeschlossen, mit einer <strong>Verbesserung der UX-Performance um 20 %</strong> für die Mitarbeitenden in der Produktion.</p>
+          </div>
+          <div class="stat-row">
+            <div class="stat"><b>4</b><span data-i18n="case1.stat1">Werke (3 DE, 1 ES)</span></div>
+            <div class="stat"><b>50+</b><span data-i18n="case1.stat2">Stakeholder ausgerichtet</span></div>
+            <div class="stat"><b>+20%</b><span data-i18n="case1.stat3">UX-Performance</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Consultantra -->
+      <article class="case case-alt">
+        <div class="case-meta">
+          <h3>Consultantra</h3>
+          <p class="case-role" data-i18n="case2.role">Product Owner Consultant</p>
+          <div class="case-tags">
+            <span class="tag" data-i18n="case2.tag1">0→1-Launch</span>
+            <span class="tag">A/B-Testing</span>
+            <span class="tag" data-i18n="case2.tag3">E-Commerce</span>
+          </div>
+        </div>
+        <div>
+          <span class="status-tag status-shipped" data-i18n="case2.status">Live — 2 Plattformen</span>
+          <div class="pillar">
+            <div class="pillar-label" data-i18n="pillar.problem">Ausgangslage</div>
+            <p data-i18n="case2.problem">Zwei Kundenprojekte — eine Restaurant-Lieferapp und eine Sneaker-E-Commerce-Plattform — mussten ohne bestehende Produktbasis vom Konzept zur Marktreife gebracht werden.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-label" data-i18n="pillar.action">Vorgehen</div>
+            <p data-i18n="case2.action">Beide Produkte <strong>von 0 auf Launch</strong> geführt: Roadmap definiert, laufend <strong>A/B-Tests</strong> durchgeführt und die Customer Journey datenbasiert gestaltet.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-label" data-i18n="pillar.result">Ergebnis</div>
+            <p data-i18n="case2.result">Nach Launch eine <strong>Steigerung des User Engagements um 15 %</strong> auf beiden Plattformen erzielt.</p>
+          </div>
+          <div class="stat-row">
+            <div class="stat"><b>2</b><span data-i18n="case2.stat1">Plattformen, 0→1</span></div>
+            <div class="stat"><b>+15%</b><span data-i18n="case2.stat2">User Engagement</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ahc / Legrand -->
+      <article class="case">
+        <div class="case-meta">
+          <h3>ahc GmbH &amp; Legrand / Trinity Touch</h3>
+          <p class="case-role" data-i18n="case3.role">Process & Product Management</p>
+          <div class="case-tags">
+            <span class="tag" data-i18n="case3.tag1">Prozessoptimierung</span>
+            <span class="tag" data-i18n="case3.tag2">Smart Home</span>
+            <span class="tag" data-i18n="case3.tag3">Automation</span>
+          </div>
+        </div>
+        <div>
+          <span class="status-tag status-shipped" data-i18n="case3.status">Live — Tools & Produktlinien</span>
+          <div class="pillar">
+            <div class="pillar-label" data-i18n="pillar.focus">Schwerpunkt</div>
+            <p data-i18n="case3.focus">Interne <strong>Prozessoptimierungs-Tools</strong> bei ahc GmbH aufgebaut und hochwertige <strong>Smart-Home- und Automatisierungsprodukte</strong> für Legrand / Trinity Touch verantwortet — von der Anforderungsdefinition bis zur marktreifen Auslieferung.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- VENTURES -->
+  <section id="ventures" class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="ventures.eyebrow">Neben dem Tagesgeschäft</div>
+        <h2 data-i18n="ventures.heading">Projekte & Innovationen</h2>
+      </div>
+
+      <div class="venture-grid">
+        <div class="venture-card">
+          <span class="venture-tag" data-i18n="venture1.tag">EdTech / GenAI</span>
+          <div class="venture-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg>
+          </div>
+          <h3 data-i18n="venture1.title">KI-Sprachlern-App & Course Ultra</h3>
+          <p data-i18n="venture1.body">Konzept für eine GenAI-gestützte Sprachlern-App entwickelt und das MVP für Course Ultra gescoped — inklusive Kern-Lernschleifen und priorisiertem Featureset.</p>
+        </div>
+
+        <div class="venture-card">
+          <span class="venture-tag" data-i18n="venture2.tag">Thought Leadership</span>
+          <div class="venture-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h12a2 2 0 012 2v14l-8-4-8 4V6a2 2 0 012-2z"/></svg>
+          </div>
+          <h3 data-i18n="venture2.title">Schreiben & Publikationen</h3>
+          <p data-i18n="venture2.body">Ein Fachbuch zur Business-IT-Kommunikation in der Finalisierung, sowie das veröffentlichte Buch <em>„Fortunate or Failure — still Tinge your Life“</em>.</p>
+        </div>
+
+        <div class="venture-card">
+          <span class="venture-tag" data-i18n="venture3.tag">Community</span>
+          <div class="venture-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+          </div>
+          <h3>Dankbarkeit Deutschland</h3>
+          <p data-i18n="venture3.body">Bundesweite Dankbarkeits-Kampagne in <strong>22 Städten</strong> gegründet und geleitet — inklusive eigens gebauter Website und digitalem Ökosystem zur Koordination von Freiwilligen und Events.</p>
+        </div>
+
+        <div class="venture-card">
+          <span class="venture-tag" data-i18n="venture4.tag">Medien & Digital</span>
+          <div class="venture-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
+          </div>
+          <h3 data-i18n="venture4.title">Digitale Publishing-Ökosysteme</h3>
+          <p data-i18n="venture4.body">Laufende Arbeit an Multimedia- und Content-Ökosystemen — Verbindung von Publishing, Distribution und Touchpoints zu einem zusammenhängenden Produkt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="skills.eyebrow">Werkzeugkasten</div>
+        <h2 data-i18n="skills.heading">Fähigkeiten & Tech-Stack</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h3 data-i18n="skills.col1">Product & Agile</h3>
+          <ul class="skill-list">
+            <li><strong>Scrum</strong> — CSP‑PO®</li>
+            <li data-i18n="skills.roadmap">Roadmapping & Backlog-Ownership</li>
+            <li>MoSCoW Prioritization</li>
+            <li>Jira</li>
+            <li>Confluence</li>
+            <li>Azure DevOps</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 data-i18n="skills.col2">Technical & AI</h3>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li data-i18n="skills.api">API-Integration</li>
+            <li data-i18n="skills.genai">Generative-AI-Workflows</li>
+            <li data-i18n="skills.prompt">Prompt Engineering</li>
+            <li data-i18n="skills.cloud">Cloud-Architektur</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 data-i18n="skills.col3">Sprachen</h3>
+          <div>
+            <div class="lang-bar"><span data-i18n="skills.de">Deutsch</span><span>C1</span></div>
+            <div class="lang-track"><div class="lang-fill" style="width:85%"></div></div>
+            <div class="lang-bar"><span data-i18n="skills.en">Englisch</span><span>C2</span></div>
+            <div class="lang-track"><div class="lang-fill" style="width:100%"></div></div>
+            <div class="lang-bar"><span data-i18n="skills.hi">Hindi</span><span>C2</span></div>
+            <div class="lang-track"><div class="lang-fill" style="width:100%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow" data-i18n="contact.eyebrow">Kontakt aufnehmen</div>
+        <h2 data-i18n="contact.heading">Kontakt</h2>
+        <p class="contact-lede" data-i18n="contact.lede">Offen für Positionen als Senior Product Owner und im Requirements Engineering in Deutschland und der EU. Ansässig in Düsseldorf — verfügbar im Büro, hybrid oder remote.</p>
+        <div class="contact-list">
+          <a href="mailto:siddharthsaini.ms@gmail.com">
+            <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            siddharthsaini.ms@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/saini-siddharth/" target="_blank" rel="noopener">
+            <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 13V10"/></svg></span>
+            linkedin.com/in/saini-siddharth
+          </a>
+          <a href="assets/Siddharth_Saini_CV.pdf" download>
+            <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 19h16"/></svg></span>
+            <span data-i18n="contact.cvLink">Vollständigen Lebenslauf herunterladen (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h4 data-i18n="contact.glance">Auf einen Blick</h4>
+        <div class="meta-row"><span data-i18n="contact.location">Standort</span><span>Düsseldorf, DE</span></div>
+        <div class="meta-row"><span data-i18n="contact.workAuth">Aufenthaltstitel</span><span data-i18n="contact.workAuthVal">Unbefristete Niederlassungserlaubnis</span></div>
+        <div class="meta-row"><span data-i18n="contact.cert">Zertifizierung</span><span>CSP‑PO®</span></div>
+        <div class="meta-row"><span data-i18n="contact.languages">Sprachen</span><span>DE (C1) · EN (C2) · HI (C2)</span></div>
+        <div class="meta-row"><span data-i18n="contact.availability">Verfügbarkeit</span><span data-i18n="contact.availabilityVal">Offen für neue Positionen</span></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span><span data-i18n="footer.copyright">© <span id="year"></span> Siddharth Saini. Alle Rechte vorbehalten.</span></span>
+      <a href="#top" data-i18n="footer.top">Nach oben ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ---------------- i18n dictionary ---------------- */
+  const translations = {
+    de: {
+      "nav.experience": "Berufserfahrung",
+      "nav.ventures": "Projekte",
+      "nav.skills": "Fähigkeiten",
+      "nav.contact": "Kontakt",
+      "nav.cv": "CV Herunterladen",
+
+      "hero.status": "Offen für Senior PO- / Requirements-Engineering-Positionen",
+      "hero.eyebrow": "Düsseldorf, Deutschland",
+      "hero.tagline": "Certified Scrum Professional (CSP‑PO)® · Ex‑Mercedes‑Benz",
+      "hero.value": "Verbindung von technischer Umsetzung und Business Value in komplexen digitalen Produkten — durch datengetriebene Priorisierung, funktionsübergreifende Stakeholder-Abstimmung und agile Führung auf Enterprise-Ebene.",
+      "hero.ctaCases": "Case Studies ansehen →",
+      "hero.ctaContact": "Kontakt aufnehmen",
+      "hero.workAuthLabel": "Aufenthaltstitel:",
+      "hero.langLabel": "Sprachen:",
+
+      "experience.eyebrow": "Case Studies, keine Stellenbeschreibung",
+      "experience.heading": "Berufserfahrung & Case Studies",
+
+      "pillar.problem": "Ausgangslage",
+      "pillar.action": "Vorgehen",
+      "pillar.result": "Ergebnis",
+      "pillar.focus": "Schwerpunkt",
+
+      "case1.role": "Product Owner — Plant Logistics Tracking Software",
+      "case1.tag2": "Multi-Plant-Rollout",
+      "case1.tag3": "API-Integration",
+      "case1.status": "Live — 4 Werke",
+      "case1.problem": "Ein Logistik-Tracking-System sollte an <strong>vier Standorten (drei in Deutschland, einem in Spanien)</strong> live gehen — bei uneinheitlichen lokalen Anforderungen und einem fixen Go-Live-Termin.",
+      "case1.action": "Backlog-Verantwortung end-to-end übernommen, <strong>50+ Stakeholder</strong> über Werke und IT hinweg mit <strong>MoSCoW-Priorisierung</strong> ausgerichtet und kritische Blocker bei der Integration einer Drittanbieter-API persönlich gelöst.",
+      "case1.result": "Rollout an allen vier Standorten vor Zeitplan abgeschlossen, mit einer <strong>Verbesserung der UX-Performance um 20 %</strong> für die Mitarbeitenden in der Produktion.",
+      "case1.stat1": "Werke (3 DE, 1 ES)",
+      "case1.stat2": "Stakeholder ausgerichtet",
+      "case1.stat3": "UX-Performance",
+
+      "case2.role": "Product Owner Consultant",
+      "case2.tag1": "0→1-Launch",
+      "case2.tag3": "E-Commerce",
+      "case2.status": "Live — 2 Plattformen",
+      "case2.problem": "Zwei Kundenprojekte — eine Restaurant-Lieferapp und eine Sneaker-E-Commerce-Plattform — mussten ohne bestehende Produktbasis vom Konzept zur Marktreife gebracht werden.",
+      "case2.action": "Beide Produkte <strong>von 0 auf Launch</strong> geführt: Roadmap definiert, laufend <strong>A/B-Tests</strong> durchgeführt und die Customer Journey datenbasiert gestaltet.",
+      "case2.result": "Nach Launch eine <strong>Steigerung des User Engagements um 15 %</strong> auf beiden Plattformen erzielt.",
+      "case2.stat1": "Plattformen, 0→1",
+      "case2.stat2": "User Engagement",
+
+      "case3.role": "Process & Product Management",
+      "case3.tag1": "Prozessoptimierung",
+      "case3.tag2": "Smart Home",
+      "case3.tag3": "Automation",
+      "case3.status": "Live — Tools & Produktlinien",
+      "case3.focus": "Interne <strong>Prozessoptimierungs-Tools</strong> bei ahc GmbH aufgebaut und hochwertige <strong>Smart-Home- und Automatisierungsprodukte</strong> für Legrand / Trinity Touch verantwortet — von der Anforderungsdefinition bis zur marktreifen Auslieferung.",
+
+      "ventures.eyebrow": "Neben dem Tagesgeschäft",
+      "ventures.heading": "Projekte & Innovationen",
+
+      "venture1.tag": "EdTech / GenAI",
+      "venture1.title": "KI-Sprachlern-App & Course Ultra",
+      "venture1.body": "Konzept für eine GenAI-gestützte Sprachlern-App entwickelt und das MVP für Course Ultra gescoped — inklusive Kern-Lernschleifen und priorisiertem Featureset.",
+      "venture2.tag": "Thought Leadership",
+      "venture2.title": "Schreiben & Publikationen",
+      "venture2.body": "Ein Fachbuch zur Business-IT-Kommunikation in der Finalisierung, sowie das veröffentlichte Buch <em>„Fortunate or Failure — still Tinge your Life“</em>.",
+      "venture3.tag": "Community",
+      "venture3.body": "Bundesweite Dankbarkeits-Kampagne in <strong>22 Städten</strong> gegründet und geleitet — inklusive eigens gebauter Website und digitalem Ökosystem zur Koordination von Freiwilligen und Events.",
+      "venture4.tag": "Medien & Digital",
+      "venture4.title": "Digitale Publishing-Ökosysteme",
+      "venture4.body": "Laufende Arbeit an Multimedia- und Content-Ökosystemen — Verbindung von Publishing, Distribution und Touchpoints zu einem zusammenhängenden Produkt.",
+
+      "skills.eyebrow": "Werkzeugkasten",
+      "skills.heading": "Fähigkeiten & Tech-Stack",
+      "skills.col1": "Product & Agile",
+      "skills.roadmap": "Roadmapping & Backlog-Ownership",
+      "skills.col2": "Technical & AI",
+      "skills.api": "API-Integration",
+      "skills.genai": "Generative-AI-Workflows",
+      "skills.prompt": "Prompt Engineering",
+      "skills.cloud": "Cloud-Architektur",
+      "skills.col3": "Sprachen",
+      "skills.de": "Deutsch",
+      "skills.en": "Englisch",
+      "skills.hi": "Hindi",
+
+      "contact.eyebrow": "Kontakt aufnehmen",
+      "contact.heading": "Kontakt",
+      "contact.lede": "Offen für Positionen als Senior Product Owner und im Requirements Engineering in Deutschland und der EU. Ansässig in Düsseldorf — verfügbar im Büro, hybrid oder remote.",
+      "contact.cvLink": "Vollständigen Lebenslauf herunterladen (PDF)",
+      "contact.glance": "Auf einen Blick",
+      "contact.location": "Standort",
+      "contact.workAuth": "Aufenthaltstitel",
+      "contact.workAuthVal": "Unbefristete Niederlassungserlaubnis",
+      "contact.cert": "Zertifizierung",
+      "contact.languages": "Sprachen",
+      "contact.availability": "Verfügbarkeit",
+      "contact.availabilityVal": "Offen für neue Positionen",
+
+      "footer.copyright": "© <span id=\"year\"></span> Siddharth Saini. Alle Rechte vorbehalten.",
+      "footer.top": "Nach oben ↑"
+    },
+    en: {
+      "nav.experience": "Experience",
+      "nav.ventures": "Ventures",
+      "nav.skills": "Skills",
+      "nav.contact": "Contact",
+      "nav.cv": "Download CV",
+
+      "hero.status": "Open to Senior PO / Requirements Engineering roles",
+      "hero.eyebrow": "Düsseldorf, Germany",
+      "hero.tagline": "Certified Scrum Professional (CSP‑PO)® · Ex‑Mercedes‑Benz",
+      "hero.value": "Bridging technical execution and business value in complex digital products — through data‑driven prioritization, cross‑functional stakeholder alignment, and agile leadership at enterprise scale.",
+      "hero.ctaCases": "View Case Studies →",
+      "hero.ctaContact": "Get in Touch",
+      "hero.workAuthLabel": "Work authorization:",
+      "hero.langLabel": "Languages:",
+
+      "experience.eyebrow": "Case studies, not a job history",
+      "experience.heading": "Professional Track Record",
+
+      "pillar.problem": "Problem",
+      "pillar.action": "Action",
+      "pillar.result": "Result",
+      "pillar.focus": "Focus",
+
+      "case1.role": "Product Owner — Plant Logistics Tracking Software",
+      "case1.tag2": "Multi-plant rollout",
+      "case1.tag3": "API integration",
+      "case1.status": "Shipped — 4 plants live",
+      "case1.problem": "A logistics tracking system needed to go live across <strong>four plants (three in Germany, one in Spain)</strong> with misaligned local requirements and a hard go‑live date.",
+      "case1.action": "Owned the backlog end‑to‑end, coordinated <strong>50+ stakeholders</strong> across plants and IT using <strong>MoSCoW prioritization</strong> to align scope, and personally unblocked critical third‑party API integration issues that were stalling delivery.",
+      "case1.result": "Rolled out ahead of schedule across all four sites, with a <strong>20% improvement in UX performance</strong> for plant floor operators.",
+      "case1.stat1": "Plants (3 DE, 1 ES)",
+      "case1.stat2": "Stakeholders aligned",
+      "case1.stat3": "UX performance",
+
+      "case2.role": "Product Owner Consultant",
+      "case2.tag1": "0→1 launch",
+      "case2.tag3": "E‑commerce",
+      "case2.status": "Shipped — 2 platforms launched",
+      "case2.problem": "Two client ventures — a restaurant delivery app and a sneaker e‑commerce platform — needed to go from concept to market with no existing product foundation.",
+      "case2.action": "Took both products from <strong>0 to launch</strong>: defined the roadmap, ran continuous <strong>A/B testing</strong>, and used data‑driven UX decisions to shape the customer journey.",
+      "case2.result": "Delivered a <strong>15% increase in user engagement</strong> post‑launch across both platforms.",
+      "case2.stat1": "Platforms, 0→1",
+      "case2.stat2": "User engagement",
+
+      "case3.role": "Process & Product Management",
+      "case3.tag1": "Process optimization",
+      "case3.tag2": "Smart home",
+      "case3.tag3": "Automation",
+      "case3.status": "Shipped — tooling & product lines",
+      "case3.focus": "Built internal <strong>process optimization tooling</strong> at ahc GmbH, and managed high‑value <strong>smart home and automation products</strong> for Legrand / Trinity Touch — spanning requirements definition through to market‑facing delivery.",
+
+      "ventures.eyebrow": "Beyond the day job",
+      "ventures.heading": "Ventures & Product Innovations",
+
+      "venture1.tag": "EdTech / GenAI",
+      "venture1.title": "AI Language Learning & Course Ultra",
+      "venture1.body": "Conceptualized a GenAI‑powered language learning app and scoped the MVP for Course Ultra — defining core learning loops and prioritized feature set.",
+      "venture2.tag": "Thought leadership",
+      "venture2.title": "Writing & Publications",
+      "venture2.body": "Finalizing a technical book on Business–IT communication, alongside the published title <em>\"Fortunate or Failure — still Tinge your Life.\"</em>",
+      "venture3.tag": "Community",
+      "venture3.body": "Founded and led a nationwide gratitude campaign spanning <strong>22 cities</strong>, including a custom‑built website and digital ecosystem to coordinate volunteers and events.",
+      "venture4.tag": "Media & digital",
+      "venture4.title": "Digital Publishing Ecosystems",
+      "venture4.body": "Ongoing work across multimedia and content ecosystems — connecting publishing, distribution, and audience touchpoints into a cohesive product.",
+
+      "skills.eyebrow": "Toolkit",
+      "skills.heading": "Skills & Technical Toolkit",
+      "skills.col1": "Product & Agile",
+      "skills.roadmap": "Roadmapping & backlog ownership",
+      "skills.col2": "Technical & AI",
+      "skills.api": "API integration",
+      "skills.genai": "Generative AI workflows",
+      "skills.prompt": "Prompt engineering",
+      "skills.cloud": "Cloud architecture",
+      "skills.col3": "Languages",
+      "skills.de": "German",
+      "skills.en": "English",
+      "skills.hi": "Hindi",
+
+      "contact.eyebrow": "Get in touch",
+      "contact.heading": "Let's Connect",
+      "contact.lede": "Open to Senior Product Owner and Requirements Engineering opportunities in Germany and across the EU. Based in Düsseldorf, ready to work in‑office, hybrid, or remote.",
+      "contact.cvLink": "Download full CV (PDF)",
+      "contact.glance": "At a glance",
+      "contact.location": "Location",
+      "contact.workAuth": "Work authorization",
+      "contact.workAuthVal": "Unbefristete Niederlassungserlaubnis (PR)",
+      "contact.cert": "Certification",
+      "contact.languages": "Languages",
+      "contact.availability": "Availability",
+      "contact.availabilityVal": "Open to new roles",
+
+      "footer.copyright": "© <span id=\"year\"></span> Siddharth Saini. All rights reserved.",
+      "footer.top": "Back to top ↑"
+    }
+  };
+
+  /* ---------------- language switching ---------------- */
+  const langButtons = { de: document.getElementById('langDE'), en: document.getElementById('langEN') };
+  let currentLang = 'de';
+
+  function applyLanguage(lang){
+    currentLang = lang;
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const value = translations[lang][key];
+      if (value !== undefined) el.innerHTML = value;
+    });
+
+    langButtons.de.setAttribute('aria-pressed', lang === 'de');
+    langButtons.en.setAttribute('aria-pressed', lang === 'en');
+
+    // year span gets wiped by innerHTML swap on footer.copyright — restore it
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  }
+
+  langButtons.de.addEventListener('click', () => applyLanguage('de'));
+  langButtons.en.addEventListener('click', () => applyLanguage('en'));
+
+  // Initialize (German default, sets year on first paint too)
+  applyLanguage('de');
+
+  /* ---------------- mobile menu ---------------- */
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a.section-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
